@@ -51,7 +51,7 @@ const Card = ({ pokemon }) => {
           )}
         </picture>
         <div className="card__type">
-          <p>Tipo: </p>
+          <p className="card__type--type">Tipo: </p>
           <div className="card__type--types">
             {pokemon.types.map((type) => (
               <p key={type.type.name} className={`type__${type.type.name}`}>

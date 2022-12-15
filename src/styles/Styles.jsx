@@ -413,8 +413,12 @@ export const PokeCard = styled.div`
       width: 100%;
       height: 80px;
 
-      p {
+      .card__type--type {
         text-align: center;
+
+        ${(props) => !props.isShown} {
+          visibility: hidden;
+        }
       }
 
       .card__type--types {
@@ -437,12 +441,12 @@ export const PokeCard = styled.div`
           text-transform: capitalize;
         }
       }
-    }
 
-    p {
-      margin: 0;
-      ${(props) => !props.isShown} {
-        display: none;
+      & + p {
+        margin: 0;
+        ${(props) => !props.isShown} {
+          visibility: hidden;
+        }
       }
     }
   }
